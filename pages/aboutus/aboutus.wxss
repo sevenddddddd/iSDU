@@ -1,0 +1,45 @@
+/* pages/aboutus/aboutus.wxss */
+.title{
+  padding:80rpx 0 20rpx;
+  text-align: center;
+}
+.logo{
+  display: block;
+  width: 150rpx;
+  height: 150rpx;
+  margin:20rpx auto;
+  background-color: green;
+}
+.v{
+  text-align: center;
+}
+.version{
+  display: inline-block;
+  padding:0 0.4em;
+  border: 1rpx solid rgb(3, 139, 115);
+  border-radius: 0.3em;
+}
+.teaminfo{
+  padding:30rpx 50rpx;
+  font-family: 'Microsoft YaHei';
+}
+.line{
+  line-height: 1.5em;
+  text-indent: 2em;
+  text-align: justify;
+}
+.bt_relief{
+  border: 1rpx solid rgb(3, 139, 115);
+  background-color: rgb(255, 255, 255);
+}
+.copyright{
+  text-align: center;
+  padding:40rpx 0 30rpx;
+}
+.footer{
+  margin-top:40rpx;
+}
+/**免责按钮点击态**/
+.bt_hover{
+  background-color: rgba(3, 139, 115,0.5);
+}

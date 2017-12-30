@@ -1,0 +1,18 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="fbcontainer">
+  <form bindsubmit="submit">
+    <textarea name="fbcontent" class="fbcontent font-size2" value="{{feedback}}"></textarea>
+      <text class="inform secondtext font-size4">以下为选填，留下您的联系方式有助于我们更快地联系到您并帮您解决问题。</text>
+      <view class="extra font-size3">
+        <view class="input">
+          <image src="pic/QQ.png" class="hinticon"></image>
+          <input placeholder="请输入您的QQ" placeholder-class="input-holder3" type="number" maxlength="12" name="qq"/>
+        </view>
+        <view class="input">
+          <image src="pic/TEL.png" class="hinticon"></image>
+          <input placeholder="请输入您的手机号" placeholder-class="input-holder3" type="number" maxlength="11" name="tel"/>
+        </view>
+      </view>
+      <button form-type="submit" class="middlebutton bg font-size2">提交</button>
+  </form>
+</view>

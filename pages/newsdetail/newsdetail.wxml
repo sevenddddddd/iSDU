@@ -1,0 +1,19 @@
+<!--pages/newsdetail/newsdetail.wxml-->
+<view class="ndcontainer" hidden='{{hidden}}'>
+  <view class="title font-size1">{{title}}</view>
+  <view class="about orangetext font-size4">
+    <view class="site">{{site}}</view>
+    <view class="date">{{date}}</view>
+  </view>
+  <view class="content main font-size3">
+    <text>{{content}}</text>
+    <view>
+      <text wx:if="{{attachment.length!=0}}" class="font-size4">\n附件：(点击可打开或下载文件)</text>
+      <block wx:for="{{attachment}}" wx:for-item="file" wx:key="*this">
+        <view class="href" bindtap="attaClick" id="{{index}}">
+          <text>{{file.title}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

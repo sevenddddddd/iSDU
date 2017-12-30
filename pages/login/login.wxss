@@ -1,0 +1,20 @@
+/* pages/login/login.wxss */
+.logincontainer{
+  padding:40rpx 0;
+}
+.avatar{
+  padding:70rpx;
+  text-align: center;
+}
+.user-avatar{
+  width:190rpx;
+  height:190rpx;
+  border-radius: 95rpx;
+}
+.loginbox{
+  padding:40rpx 50rpx;
+}
+button{
+  margin-top: 150rpx;
+  box-shadow: 5rpx 8rpx 10rpx 0 rgba(3, 139, 115, 0.6);
+}

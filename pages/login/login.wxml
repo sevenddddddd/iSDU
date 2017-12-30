@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class="logincontainer">
+  <view class="avatar">
+    <image src="{{userInfo.avatarUrl}}" mode="aspectFill" class="user-avatar"></image>
+  </view>
+  <view class="loginbox font-size1">
+    <form bindsubmit="login">
+      <view class="input">
+        <image src="pic/stuIDicon.png" class="hinticon"></image>
+        <input placeholder="学号" placeholder-class="input-holder1" type="text" confirm-type="next" name="stuID" focus="{{formFocus[0]}}" bindconfirm="next"/>
+      </view>
+      <view class="input">
+        <image src="pic/passicon.png" class="hinticon"></image>
+        <input placeholder="教务密码" placeholder-class="input-holder1" type="text" confirm-type="next" password="{{true}}" name="pass" focus="{{formFocus[1]}}" bindconfirm="next"/>
+      </view>
+      <button form-type="submit" class="bigbutton bg font-size1">登录</button>
+    </form>
+  </view>
+</view>

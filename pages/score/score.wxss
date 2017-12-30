@@ -1,0 +1,83 @@
+/* pages/score/score.wxss */
+.scorecontainer{
+  padding-bottom:30rpx;
+}
+.tab{
+  display: inline-flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width:50%;
+  align-items: center;
+  padding:0.5em 0 0.1em;
+}
+.mark{
+  display: inline-block;
+  padding:0.1em 2.8em;
+  margin-top:0.4em;
+}
+/**tab下划线的颜色**/
+/**显示**/
+.currenttab{
+  background-color: white;
+}
+/**隐藏**/
+.hide{
+  background-color: rgba(3, 139, 115);
+}
+.hint{
+  text-align: center;
+  padding:1em;
+}
+.currentscore{
+  padding-bottom: 96rpx;
+}
+.GPA-all{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding:1em 0;
+  background-color: rgba(217, 143, 64,0.5);
+}
+.GPA{
+  text-align: center;
+  padding:1em;
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  padding:0.9em 0.9em 0;
+}
+.title{
+  margin-bottom:0.3em;
+}
+.smallicon{
+  width:1em;
+  height:1em;
+  vertical-align: middle;
+}
+/**item是否有上粗边线**/
+.border{
+  border-top:15rpx solid rgb(242, 244, 245);
+}
+.noneborder{
+  border-top:none;
+}
+.attr{
+  margin-left: 1em;
+  padding:0.1em 0.5em;
+  border:1rpx solid rgb(217, 143, 64);
+  border-radius: 0.7em;
+}
+.info{
+  padding:0.7em 0.3em;
+  border-bottom:1rpx solid rgba(221, 221, 221, 0.5);
+  
+}
+.infolable{
+  vertical-align: middle;
+  margin-left: 0.6em;
+}
+.infocontent{
+  float: right;
+}

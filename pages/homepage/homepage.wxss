@@ -1,0 +1,119 @@
+/* pages/homepage/homepage.wxss */
+swiper{
+  height:300rpx;
+  box-shadow:0 0 20rpx rgb(221, 221, 221) inset;
+}
+
+.swiper-image {
+  width: 100%;
+  height: 100%;
+}
+
+.functions {
+  padding: 20rpx 0;
+}
+
+.function {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 21%;
+  box-sizing: border-box;
+  margin: 0 2%;
+  padding:5rpx 0;
+}
+
+.ficon {
+  width: 70rpx;
+  height: 70rpx;
+  padding: 15rpx;
+}
+
+.f-hover{
+  background-color: rgb(245, 245, 245);
+  color:rgb(3, 139, 115);
+}
+
+
+.titlebar {
+  padding: 0 0.3em;
+  overflow: auto;
+}
+
+.mark {
+  display: inline-block;
+  padding: 0.6em 0.15em;
+  background-color: rgb(3, 139, 115);
+  vertical-align: middle;
+  margin: 0.4em;
+}
+
+.title {
+  vertical-align: middle;
+}
+
+/**今日课程的内容框**/
+.todayclass{
+  padding: 20rpx 45rpx;
+}
+.courseorder {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 8%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.coursedetail {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  padding-left:20rpx;
+  width: 90%;  
+}
+
+.courseinfo{
+  padding-top:0.5em;
+}
+
+.timeicon {
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.2em;
+  vertical-align: middle;
+}
+
+.placeicon {
+  width: 0.8em;
+  height: 1em;
+  margin-right: 0.2em;
+  vertical-align: middle;
+}
+
+.coursetime{
+  margin-right: 1em;
+  vertical-align: middle;
+}
+
+.courseplace{
+  vertical-align: middle;
+}
+
+.class-hint{
+  text-align: center;
+  padding:1em 0;
+}
+
+/**资讯**/
+.latest-content{
+  padding:15rpx 45rpx 60rpx;
+}
+.newsabout{
+  padding:10rpx 45rpx;
+}
+.news-hint{		 
+  text-align: center;		 
+  padding:1em 0;		 
+}

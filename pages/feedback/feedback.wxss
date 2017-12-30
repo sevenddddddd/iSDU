@@ -1,0 +1,35 @@
+/* pages/feedback/feedback.wxss */
+page{
+  background-color: rgb(242, 244, 245);
+}
+.fbcontainer{
+  width:700rpx;
+  margin:0 auto;
+  padding:20rpx 0;
+}
+.fbcontent{
+  margin: 15rpx 10rpx;
+  width:auto;
+  height:330rpx;
+  padding:0.5em;
+  background-color: white;
+}
+.inform{
+  display: block;
+  padding:15rpx 10rpx;
+  line-height: 1.4em;
+}
+.inform::before{
+  content:"*";
+  color: rgb(217, 143, 64);
+}
+.input{
+  border-bottom: none;
+}
+input{
+  border-bottom: 1rpx solid rgb(3,139,115);
+  margin-left:10rpx;
+}
+button{
+  margin-top:2.2em;
+}

@@ -1,0 +1,25 @@
+<!--pages/deposit/deposit.wxml-->
+<view class="depositcontainer">
+  <view class="amount">
+    <view class="header font-size3">
+      <image src="pic/amount.png" mode="aspectFill" class="smallicon"></image>
+      <text class="headertext secondtext">请选择充值金额</text>
+    </view>
+    <view class="radios font-size2">
+      <radio-group class="main" bindchange="getAmount">
+        <radio value="20" class="radio">20元</radio>
+        <radio value="50" class="radio">50元</radio>
+        <radio value="100" class="radio">100元</radio>
+        <radio value="200" class="radio">200元</radio>
+        <radio value="0" class="other" checked="{{true}}">其它</radio>
+        <input class="ud-input color" placeholder="输入金额(不超过300)" placeholder-class="input-holder3" type="number" maxlength="3" disabled="{{disable}}" focus="{{focus}}" bindinput="getUDamount"></input>
+        <text class="secondtext">元</text>
+      </radio-group>
+    </view>
+  </view>
+  <button class="bt_deposit bg font-size3" bindtap="deposit">确认充值</button>
+  <view class="extra font-size4 secondtext">
+    <text>特别说明：</text>
+    <view style="text-indent:2em;">使用在线充值功能后，所充值的金钱数额会暂时存放在过渡余额中，在任何一部消费机上刷卡后，过渡余额即会转至余额。</view>
+  </view>
+</view>

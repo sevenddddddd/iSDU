@@ -1,0 +1,56 @@
+<!--pages/person/person.wxml-->
+<view class="personcontainer">
+  <view class="wx-info">
+    <image src="{{userInfo.avatarUrl}}" mode="aspectFill" class="user-avatar"></image>
+    <text class="user-nickname font-size1">{{stuInfo.name}}</text>
+  </view>
+  <view class="stu-info main">
+    <view class="info">
+      <image src="pic/stuIDicon.png" mode="aspectFill" class="smallicon"></image>
+      <text class="labletext font-size2">学号</text>
+      <text class="content unchtext font-size3">{{stuInfo.stuNum}}</text>
+    </view>
+    <view class="info">
+      <image src="pic/cardicon.png" mode="aspectFill" class="smallicon"></image>
+      <text class="labletext font-size2">校园卡号</text>
+      <text class="content unchtext font-size3">{{cardNo}}</text>
+    </view>
+    <view class="info">
+      <image src="pic/departmenticon.png" mode="aspectFill" class="smallicon"></image>
+      <text class="labletext font-size2">学院</text>
+      <text class="content unchtext font-size3">{{stuInfo.college}}</text>
+    </view>
+    <view class="info">
+      <image src="pic/majoricon.png" mode="aspectFill" class="smallicon"></image>
+      <text class="labletext font-size2">专业</text>
+      <text class="content unchtext font-size3">{{stuInfo.major}}</text>
+    </view>
+    <view class="info" style="border-bottom:none;">
+      <image src="pic/classicon.png" mode="aspectFill" class="smallicon"></image>
+      <text class="labletext font-size2">班级</text>
+      <text class="content unchtext font-size3">{{stuInfo.classNumber}}</text>
+    </view>
+  </view>
+  <view class="about">
+    <navigator url="/pages/aboutus/aboutus" hover-class="select">
+      <view class="info">
+        <image src="pic/aboutusicon.png" mode="aspectFill" class="smallicon"></image>
+        <text class="labletext font-size2">关于</text>
+        <image src="pic/TDCodeLogo.png" mode="aspectFill" class="TDCodeicon" catchtap="showTDCode"></image>
+      </view>
+    </navigator>
+    <navigator url="/pages/feedback/feedback" hover-class="select">
+      <view class="info" style="border-bottom:none;">
+        <image src="pic/feedbackicon.png" mode="aspectFill" class="smallicon"></image>
+        <text class="labletext font-size2">问题反馈</text>
+        <view style="float:right;margin-top:0.2em;">
+          <view class="pointer"></view>
+          <view class="pseudopointer"></view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view class="logoutbox">
+    <text class="logoutbutton warntext font-size2" bindtap="logout">{{logoutAction}}</text>
+  </view>
+</view>

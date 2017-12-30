@@ -1,0 +1,31 @@
+<!--pages/exam/exam.wxml-->
+<view class="examcontainer">
+  <block wx:for="{{exams}}" wx:for-item="exam" wx:key="*this">
+    <view class="exam main">
+      <view class="title">
+        <text class="name font-size2">{{exam.courseName}}</text>
+        <text class="attr font-size4 orangetext">{{exam.examMethod}}</text>
+      </view>
+      <view class="info font-size3">
+        <image src="pic/dateicon.png" class="smallicon"></image>
+        <text class="infolable">日期</text>
+        <text class="infocontent unchtext">{{exam.examDate}}</text>
+      </view>
+      <view class="info font-size3">
+        <image src="/utils/pic/clockicon.png" class="smallicon"></image>
+        <text class="infolable">时间</text>
+        <text class="infocontent unchtext">{{exam.examTime}}</text>
+      </view>
+      <view class="info font-size3">
+        <image src="pic/placeicon.png" class="smallicon"></image>
+        <text class="infolable">地点</text>
+        <text class="infocontent unchtext">{{exam.examRoom}}</text>
+      </view>
+      <view class="info font-size3" style="border-bottom:none;">
+        <image src="pic/pencilicon.png" class="smallicon"></image>
+        <text class="infolable">成绩比例</text>
+        <text class="infocontent unchtext">{{exam.resultComposition}}</text>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/relief/relief.wxml-->
+<view class="reliefcontainer font-size3">
+  <view class="header main">
+    使用i山大小程序即表明您已阅读、理解并同意以下内容，并遵循所有相关的法律法规。如果您对以下声明有任何异议或者不愿意遵守以下声明，请立即停止使用本产品。
+  </view>
+  <view class="article main">
+    <view class="item">1. 对本平台的使用不得违背法律法规及公众道德。</view>
+    <view class="item">2. 开发团队力争保持本平台所有信息的及时性和准确性，但是由于数据来源的局限性，平台中所载信息有极小几率已经失效。所以本开发团队不对平台所载信息（包括但不局限于图片、校园卡数据、各种链接等）的及时性和准确性做出保证。若要获得最准确的信息，请直接与相关责任部门取得联系。</view>
+    <view class="item">3. 本平台如需系统维护或升级而暂停服务，将会事先公告。若因线路及非本平台控制范围外的硬件故障或其他不可抗力而导致暂停服务，于暂停服务期间造成的一切不便与损失，本平台不负任何责任。</view>
+    <view class="item">4. 本平台之声明以及其修改权、更新权及最终解释权均属山东大学学生在线所有。</view>
+  </view>
+  <view class="copyright unchtext">
+      <text>学生在线©版权所有</text>
+  </view>
+</view>

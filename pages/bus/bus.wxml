@@ -1,0 +1,25 @@
+<!--pages/bus/bus.wxml-->
+<view class="buscontainer">
+  <view class="result font-size3">
+    <block wx:for="{{buses}}" wx:for-item="bus" wx:key="*this">
+      <view class="bus">
+        <image src="/utils/pic/clockicon.png" class="clock"></image>
+        <view class="info main">
+          <text class="time">{{bus.t}}</text>
+          <view>
+            <text class="about unchtext">始</text>
+            <text>{{bus.s}}</text>
+          </view>
+          <view>
+            <text class="about unchtext">经</text>
+            <text>{{bus.p}}</text>
+          </view>
+          <view>
+            <text class="about unchtext">终</text>
+            <text>{{bus.e}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

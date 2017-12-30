@@ -1,0 +1,39 @@
+/* pages/exam/exam.wxss */
+page{
+  background-color: rgb(242, 244, 245);
+}
+.examcontainer{
+  padding: 15rpx 0;
+}
+.exam{
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+  padding:0.9em 0.7em 0.5em;
+  background-color: white;
+}
+.title{
+  margin-bottom:0.3em;
+}
+.attr{
+  margin-left:1em;
+  padding:0.1em 0.5em;
+  border:1rpx solid rgb(217, 143, 64);
+  border-radius: 0.7em;
+}
+.smallicon{
+  width:1em;
+  height:1em;
+  vertical-align: middle;
+}
+.info{
+  padding:0.6em 0.3em;
+  border-bottom:1rpx solid rgba(221, 221, 221, 0.5);
+}
+.infolable{
+  vertical-align: middle;
+  margin-left: 0.6em;
+}
+.infocontent{
+  float: right;
+}

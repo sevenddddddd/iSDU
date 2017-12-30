@@ -1,0 +1,39 @@
+/* pages/bus/bus.wxss */
+
+.buscontainer{
+  margin: 30rpx 0;
+}
+
+.result {
+  width: 600rpx;
+  margin: 0 auto;
+  padding: 50rpx;
+  box-shadow: 0 0 15rpx 1rpx rgb(242, 244, 245);
+}
+
+
+.bus {
+  margin-bottom: 50rpx;
+  vertical-align: top;
+}
+
+.clock {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 5rpx;
+}
+
+.info {
+  display: inline-flex;
+  flex-direction: column;
+  width: 500rpx; 
+  vertical-align: top;
+  line-height: 1.5em;
+}
+.time{
+  line-height: 1.2em;
+}
+.about {
+  margin-right: 20rpx;
+}

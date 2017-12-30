@@ -1,0 +1,21 @@
+/* pages/relief/relief.wxss */
+.reliefcontainer{
+  padding:0 40rpx;
+}
+.header{
+  margin: 30rpx 0;
+  text-align: justify;
+}
+.article{
+  text-align: justify;
+}
+.item{
+  margin: 10rpx 0;
+}
+.copyright{
+  position: fixed;
+  width:100%;
+  bottom:1em;
+  left: 0;
+  text-align: center;
+}

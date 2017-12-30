@@ -1,0 +1,38 @@
+<!--pages/classtable/classtable.wxml-->
+<view class="ctcontainer">
+  <view class="picker font-size1 bg">
+    <picker mode="selector" range="{{pickerrange}}" bindchange="changeTime">
+      <text class="firstletter">第</text>
+      <view class="pickertime">{{pickerrange[time]}}</view>
+      <text>周</text>
+      <image src="/utils/pic/switch_green.png" mode="aspectFill" class="switchicon"></image>
+    </picker>
+  </view>
+  <view class="weekdays font-size2 color">
+    <view class="blank">  </view>
+    <view class="weekday">一<text class="{{time==now.week&&now.day==1?'currentday':'notCday'}}"></text></view>
+    <view class="weekday">二<text class="{{time==now.week&&now.day==2?'currentday':'notCday'}}"></text></view>
+    <view class="weekday">三<text class="{{time==now.week&&now.day==3?'currentday':'notCday'}}"></text></view>
+    <view class="weekday">四<text class="{{time==now.week&&now.day==4?'currentday':'notCday'}}"></text></view>
+    <view class="weekday">五<text class="{{time==now.week&&now.day==5?'currentday':'notCday'}}"></text></view>
+    <view class="weekday">六<text class="{{time==now.week&&now.day==6?'currentday':'notCday'}}"></text></view>
+    <view class="weekday">日<text class="{{time==now.week&&now.day==7?'currentday':'notCday'}}"></text></view>
+  </view>
+  <view class="orders" style="height:{{contentHeight}}px" hidden="{{hidden}}">
+    <block wx:for="{{[1,2,3,4,5]}}" wx:for-index="orderIndex" wx:for-item="order" wx:key="*this">
+      <view class="row">
+        <view class="order font-size2 color">{{order}}</view>
+        <block wx:for="{{[1,2,3,4,5,6,7]}}" wx:for-index="weekdayIndex" wx:for-item="weekday" wx:key="*this">
+          <view class="info" style="transform:{{detail[weekdayIndex][orderIndex].hasClass?detail[weekdayIndex][orderIndex].tf:'none'}};background-color:{{detail[weekdayIndex][orderIndex].hasClass?detail[weekdayIndex][orderIndex].bg:'white'}}" bindtap="infoTap" data-col="{{weekdayIndex}}" data-row="{{orderIndex}}">
+          <block wx:if="{{detail[weekdayIndex][orderIndex].hasClass}}">
+            <text>{{detail[weekdayIndex][orderIndex].info.courseName}}</text>
+            <text>@{{detail[weekdayIndex][orderIndex].info.room?detail[weekdayIndex][orderIndex].info.room:'地点未知'}}</text>
+            <text>{{detail[weekdayIndex][orderIndex].info.teacher?detail[weekdayIndex][orderIndex].info.teacher:'未知老师'}}</text>
+          </block>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+</view>

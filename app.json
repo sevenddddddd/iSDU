@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/news/news",
+    "pages/person/person",
+    "pages/newsdetail/newsdetail",
+    "pages/login/login",
+    "pages/cardlogin/cardlogin",
+    "pages/library/library",
+    "pages/studyroom/studyroom",
+    "pages/schoolbus/schoolbus",
+    "pages/bus/bus",
+    "pages/feedback/feedback",
+    "pages/score/score",
+    "pages/exam/exam",
+    "pages/room/room",
+    "pages/classtable/classtable",
+    "pages/calendar/calendar",
+    "pages/card/card",
+    "pages/aboutus/aboutus",
+    "pages/relief/relief",
+    "pages/deposit/deposit"
+  ],
+  "tabBar": {
+    "position": "bottom",
+    "color": "#888",
+    "selectedColor": "#038b73",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "tabbar/news_grey.png",
+        "selectedIconPath": "tabbar/news_light.png"
+      },
+      {
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页",
+        "iconPath": "tabbar/hp_grey.png",
+        "selectedIconPath": "tabbar/hp_light.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我",
+        "iconPath": "tabbar/person_grey.png",
+        "selectedIconPath": "tabbar/person_light.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#038b73",
+    "navigationBarTitleText": "i山大",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": false
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  }
+}

@@ -1,0 +1,74 @@
+/* pages/schoolbus/schoolbus.wxss */
+
+.sbcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hint{
+  padding:1em 0;
+}
+
+.district {
+  text-align: center;
+}
+
+.campus {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+  margin: 0 15rpx 50rpx;
+  align-items: center;
+  border-radius: 8rpx;
+}
+
+.symbol {
+  width: 130rpx;
+  height: 130rpx;
+  padding: 0 40rpx 15rpx;
+  border: none;
+}
+
+.instructions {
+  padding: 10rpx 10%;
+  width: 80%;
+  background-color: #ffebac;
+  line-height: 1.5em;
+}
+
+.dayselect {
+  padding: 50rpx 0;
+  text-align: center;
+  font-weight:bold;
+  
+}
+
+.day_work {
+  margin: 0 120rpx;
+}
+
+.day_weekend {
+  margin: 0 100rpx;
+}
+
+.hr {
+  border: 1rpx solid gainsboro;
+}
+
+.activity {
+  padding: 30rpx 0;
+}
+
+button {
+  display: inline-block;
+  width: 150rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 110rpx;
+  border: 1rpx solid rgb(3, 139, 115);
+  color:rgb(3,139,115);
+}
+
+.bt_query {
+  background-color: #fff;
+}

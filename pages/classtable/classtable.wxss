@@ -1,0 +1,54 @@
+/* pages/classtable/classtable.wxss */
+.weekdays{
+  line-height: 1.4em;
+  background-color: rgb(232, 232, 232);
+}
+.blank{
+  display: inline-block;
+  width:5.5%;
+  box-sizing: border-box;
+  height:1.6em;
+  vertical-align: top;
+}
+.weekday{
+  display: inline-flex;
+  flex-direction: column;
+  width:13.5%;
+  padding:0.1em;
+  box-sizing: border-box;
+  text-align: center;
+}
+.row{
+  height:20%;
+  color:white;
+}
+.order{
+  display: inline-block;
+  width:5.5%;
+  height: 100%;
+  line-height: 6em;
+  box-sizing: border-box;
+  text-align: center;
+  border-bottom:1rpx solid rgb(218, 218, 218);
+  background-color: rgb(232, 232, 232);
+}
+.info{
+  display: inline-flex;
+  flex-direction: column;
+  width:13.5%;
+  padding:0.1em;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.6em;
+  height:100%;
+  vertical-align: top;
+}
+/**星期：今天**/
+.currentday{
+  padding:0.1em 0.4em;
+  background-color: rgb(3,139,115);
+}
+/**星期：非今天**/
+.notCday{
+  padding:0.1em 0.4em;
+}

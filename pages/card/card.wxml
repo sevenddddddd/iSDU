@@ -1,0 +1,37 @@
+<!--pages/card/card.wxml-->
+<view class="cardcontainer">
+  <view class="brief">
+    <view class="header">
+      <text class="font-size2">校园卡余额</text>
+      <text class="suspend orangetext font-size3" hidden='{{true}}'>我要挂失</text>
+    </view>
+    <view class="figure">
+      <text class="orangetext">{{figure}}</text>
+      <text class="secondtext font-size3">元</text>
+    </view>
+    <view class="transition font-size3">
+      <text class="main">过渡余额： {{transition}}</text>
+      <text class="secondtext">元</text>
+    </view>
+    <view class="status font-size3">
+      <text class="main">挂失状态</text>
+      <text class="content {{suspend?'warntext':'color'}}">{{suspend?"已挂失":"正常卡"}}</text>
+    </view>
+    <view class="status font-size3">
+      <text class="main">冻结状态</text>
+      <text class="content {{freeze?'warntext':'color'}}">{{freeze?"已挂失":"正常卡"}}</text>
+    </view>
+  </view>
+  <view class="details main">
+    <navigator url="/pages/deposit/deposit" hover-class="select">
+      <view class="service" style="border-bottom:none;">
+        <image src="pic/transfer.png" mode="aspectFill" class="smallicon"></image>
+        <text class="labletext font-size2">余额充值</text>
+        <view style="float:right;margin-top:0.2em;">
+          <view class="pointer"></view>
+          <view class="pseudopointer"></view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

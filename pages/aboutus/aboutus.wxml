@@ -1,0 +1,23 @@
+<!--pages/aboutus/aboutus.wxml-->
+<view class="aucontainer">
+  <view class="title">
+    <image src="/utils/pic/iLOGO.png" class="logo"></image>
+    <text class="font-size1">i山大</text>
+    <view class="v">
+      <text class="version bg font-size5">v 1.0.1</text>
+    </view>
+  </view>
+  <view class="teaminfo main font-size4">
+    <view class="line">“学生在线”是隶属于山东大学党委学生工作部，始建于2000年，由学生自主运营的大型网络文化工作室，下设技术工程事业群、应用服务事业群、网络媒体事业群和团队发展事业群。</view>
+    <view class="line">学生在线自主开发运维的产品主要包括：网站“学生在线”，服务号“i山大”（isdu1901），资讯号“山东大学学工部”（online_sdu），i山大小程序和APP。</view>
+    <view class="line">十七年来，学生在线始终坚持“为学生服务，替学生发声”的宗旨，不断提高和完善自身。</view>
+    <view class="line">来学生在线，和有意思的人，发现更精彩的自己。</view>
+    <text class="line">联系我们：\n邮箱：isdu1901@163.com\nQQ： 177803411\n微信：i山大（isdu1901）客服</text>
+  </view>
+  <view class="footer">
+    <button class="middlebutton color bt_relief font-size2" hover-class="bt_hover" bindtap="enterRelief">免责声明</button>
+    <view class="copyright unchtext font-size3">
+      <text>学生在线 © 版权所有</text>
+    </view>
+  </view>
+</view>

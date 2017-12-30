@@ -1,0 +1,2 @@
+<!--pages/calendar/calendar.wxml-->
+<image src="pic/calendar2017-2018.jpg" class="calendar"></image>

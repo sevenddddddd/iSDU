@@ -1,0 +1,180 @@
+/* pages/library/library.wxss */
+
+.librarycontainer {
+  padding-bottom: 30rpx;
+}
+/**当前借阅template**/
+.search {
+  padding: 30rpx 40rpx 50rpx;
+  
+  border-bottom: 15rpx solid rgb(242, 244, 245);
+}
+
+.input-search {
+  border-bottom: 1rpx solid rgb(3, 139, 115);
+}
+
+input {
+  width: 602rpx;
+}
+
+.borrowed {
+  padding: 0 35rpx;
+}
+
+.borrowedHint{
+  text-align: center;
+  padding:1em;
+}
+
+.b-book {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.5);
+}
+
+.searchicon {
+  width: 48rpx;
+  height: 39rpx;
+  padding:20rpx 10rpx;
+  vertical-align: middle;
+}
+
+.lable {
+  padding: 0.6em 0.5em;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.5);
+}
+
+.b-name {
+  padding: 0.3em 0;
+}
+
+.b-info {
+  
+  padding: 0.2em 0.5em;
+}
+
+.b-infoicon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.b-infocontent {
+  margin-left: 0.8em;
+  vertical-align: middle;
+}
+.tag{
+  width:0.5em;
+  height:1.2em;
+  position: absolute;
+  top:0;
+  right:0;
+  
+}
+/**查询结果template**/
+.resultHint{
+  text-align: center;
+  padding:1em;
+}
+.r-book{
+  padding:0.5em 0;
+  border-bottom: 20rpx solid rgb(242, 244, 245);
+}
+.title{
+  margin:0 0.8em;
+  padding:0.5em 0;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.5);
+}
+.r-name{
+  padding:0.3em 0;
+  margin-left:-0.3em;
+}
+.r-author{
+  padding:0.2em 0;
+}
+.r-info{
+  padding:1em 0.5em 0.8em;
+}
+.noborrow{
+  text-align: center;
+}
+.thead{
+  display:flex;
+  flex-direction:row;
+  padding:0.2em;
+}
+.inlinebox{
+  flex:1;
+  text-align:center;
+}
+.item{
+  display:flex;
+  flex-direction:row;
+  margin-top:1em;
+  
+}
+/**余座查询template**/
+.campuses {
+  padding: 1em 0.2em;
+  text-align: center;
+  border-bottom: 15rpx solid rgb(242, 244, 245);
+}
+
+.campus {
+  width: 215rpx;
+  margin:0 10rpx 0.3em;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.2em;
+}
+
+.symbol {
+  width: 2em;
+  height: 2em;
+  padding: 0.5em;
+}
+
+.rooms{
+  padding:0 30rpx;
+  background-color: rgb(250, 252, 249);
+}
+.room{
+  padding:35rpx 0;
+  border-bottom: 1rpx solid rgba(221, 221, 221, 0.5);
+}
+.roomname{
+  display: inline-block;
+  box-sizing:border-box;
+  width:20%;
+  padding:0.2em;
+  border-right:5rpx solid rgb(3, 139, 115);
+  vertical-align: middle;
+}
+.seats{
+  display: inline-block;
+  box-sizing:border-box;
+  width:80%;
+  vertical-align: middle;
+  text-align: right;
+}
+.occupied{
+  display: inline-block;
+  width:2em;
+  padding-right:0.5em;
+  color: black;
+}
+.left{
+  display: inline-block;
+  width:2em;
+  padding-right:0.5em;
+}
+.hint {
+  position: fixed;
+  bottom: 40%;
+  width: 100%;
+  text-align: center;
+}

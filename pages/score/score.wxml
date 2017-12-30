@@ -1,0 +1,82 @@
+<!--pages/score/score.wxml-->
+<view class="scorecontainer">
+  <!--tabbar-->
+  <view class="font-size1">
+    <view id="0" class="tab bg" bindtap="tab">
+      <text>本学期成绩</text>
+      <text class="mark {{tab?'currenttab':'hide'}}"></text>
+    </view>
+    <view id="1" class="tab bg" bindtap="tab">
+      <text>历年成绩</text>
+      <text class="mark {{tab?'hide':'currenttab'}}"></text>
+    </view>
+  </view>
+  <!--本学期成绩模板-->
+  <template name="semester">
+    <view wx:if="{{noScore}}" class="hint color font-size3">本学期成绩未出~</view>
+    <block wx:for="{{items}}" wx:for-item="item" wx:key="*this">
+      <view class="item {{index>0?'border':'noneborder'}}">
+        <view class="title">
+          <text class="name font-size2">{{item.kcm}}</text>
+        </view>
+        <view class="info font-size3">
+          <image src="pic/crediticon.png" class="smallicon"></image>
+          <text class="infolable main">学分</text>
+          <text class="infocontent unchtext">{{item.xf}}</text>
+        </view>
+        <view class="info font-size3 main" style="border-bottom:none;">
+          <image src="pic/scoreicon.png" class="smallicon"></image>
+          <text class="infolable main">成绩</text>
+          <text class="infocontent orangetext">{{item.cj}}</text>
+        </view>
+      </view>
+    </block>
+  </template>
+  <!--历年成绩模板-->
+  <template name="history">
+    <view class="GPA-all main font-size3">总绩点：
+      <text class="color">{{GPA_all}}</text>
+    </view>
+    <view class="picker font-size1">
+      <picker mode="selector" range="{{pickerrange}}" bindchange="changeTime">
+        <text class="firstletter">第</text>
+        <view class="pickertime color">{{pickerrange[time]}}</view>
+        <text>学期</text>
+        <image src="/utils/pic/switch_white.png" mode="aspectFill" class="switchicon"></image>
+      </picker>
+    </view>
+    <view wx:if="{{items.length==0}}" class="hint color font-size3">{{hint}}</view>
+    <view wx:else class="GPA main font-size2">学期绩点：
+      <text class="orangetext">{{GPA}}</text>
+    </view>
+    <view class="currentscore">
+      <block wx:for="{{items}}" wx:for-item="item" wx:key="*this">
+        <view class="item border">
+          <view class="title">
+            <text class="name font-size2">{{item.kcm}}</text>
+            <text class="attr font-size4 orangetext">{{item.kcsx}}</text>
+          </view>
+          <view class="info font-size3">
+            <image src="pic/crediticon.png" class="smallicon"></image>
+            <text class="infolable main">学分</text>
+            <text class="infocontent unchtext">{{item.xf}}</text>
+          </view>
+          <view class="info font-size3">
+            <image src="pic/scoreicon.png" class="smallicon"></image>
+            <text class="infolable main">成绩</text>
+            <text class="infocontent orangetext">{{item.kscjView}}</text>
+          </view>
+          <view class="info font-size3" style="border-bottom:none;">
+            <image src="pic/levelicon.png" class="smallicon"></image>
+            <text class="infolable main">等级</text>
+            <text class="infocontent orangetext">{{item.wfzdj}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </template>
+  <!--成绩信息-->
+  <view class="score">
+    <template is="{{tab?'semester':'history'}}" data="{{...scoretab}}"></template>
+  </view>
+</view>

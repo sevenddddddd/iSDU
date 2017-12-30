@@ -1,0 +1,93 @@
+<!--pages/homepage/homepage.wxml-->
+<view class="hpcontainer">
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#038b73">
+    <swiper-item>
+      <image src="https://sduonline.cn/miniapp/hpslider1.png" class="swiper-image"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://sduonline.cn/miniapp/hpslider2.png" class="swiper-image"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://sduonline.cn/miniapp/hpslider3.png" class="swiper-image"></image>
+    </swiper-item>
+  </swiper>
+  <view class="functions main font-size5">
+    <view class="function" bindtap="enterFunction" id="classtable" hover-class="f-hover">
+      <image src="pic/classtableicon.png" class="ficon"></image>
+      <text class="fname">课表</text>
+    </view>
+    <view class="function" bindtap="enterFunction" id="library" hover-class="f-hover">
+      <image src="pic/libraryicon.png" class="ficon"></image>
+      <text class="fname">图书馆</text>
+    </view>
+    <view class="function" bindtap="enterFunction" id="schoolbus" hover-class="f-hover">
+      <image src="pic/schoolbusicon.png" class="ficon"></image>
+      <text class="fname">校车查询</text>
+    </view>
+    <view class="function" bindtap="enterFunction" id="calendar" hover-class="f-hover">
+      <image src="pic/calendaricon.png" class="ficon"></image>
+      <text class="fname">校历</text>
+    </view>
+    <view class="function" bindtap="enterFunction" id="exam" hover-class="f-hover">
+      <image src="pic/examicon.png" class="ficon"></image>
+      <text class="fname">考试安排</text>
+    </view>
+    <view class="function" bindtap="enterFunction" id="studyroom" hover-class="f-hover">
+      <image src="pic/studyroomicon.png" class="ficon"></image>
+      <text class="fname">自习室</text>
+    </view>
+    <view class="function" bindtap="enterFunction" id="score" hover-class="f-hover">
+      <image src="pic/scoreicon.png" class="ficon"></image>
+      <text class="fname">成绩查询</text>
+    </view>
+    <view class="function" bindtap="enterFunction" id="card" hover-class="f-hover">
+      <image src="pic/cardicon.png" class="ficon"></image>
+      <text class="fname">校园卡</text>
+    </view>
+  </view>
+  <view class="font-size2">
+    <view class="titlebar" bindtap="enterClasstable">
+      <view class="mark"></view>
+      <text class="title">今日课程</text>
+      <view class="p">
+        <view class="pointer"></view>
+        <view class="pseudopointer"></view>
+      </view>
+    </view>
+    <view wx:if="{{todayclasses.length==0}}" class="class-hint color">{{classHint}}</view>
+    <block wx:for="{{todayclasses}}" wx:for-item="class" wx:key="*this">
+      <view wx:if="{{class}}" class="todayclass">
+        <view class="courseorder orangetext">
+          {{class.courseOrder}}
+        </view>
+        <view class="coursedetail">
+          <text class="color">{{class.courseName}}</text>
+          <view class="courseinfo secondtext font-size3">
+            <image src="pic/time.png" class="timeicon"></image>
+            <text class="coursetime">{{classtime?time_order_summer[class.courseOrder]:time_order_winter[class.courseOrder]}}</text>
+            <image src="pic/place.png" class="placeicon"></image>
+            <text class="courseplace">{{class.room?class.room:"地点未知"}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="font-size2">
+    <view class="titlebar" bindtap="enterNews">
+      <view class="mark"></view>
+      <text class="title">最新资讯</text>
+      <view class="p">
+        <view class="pointer"></view>
+        <view class="pseudopointer"></view>
+      </view>
+    </view>
+    <view class="latest-content" bindtap='getDetail'>
+      <view wx:if="{{newsHint!=''}}" class="news-hint color">{{newsHint}}</view>
+      <text class="main">{{latestnews.title}}</text>
+      <view class="newsabout secondtext font-size3" style="border-bottom:none;">
+        <text>{{latestnews.block}}</text>
+        <text class="newsdate">{{latestnews.date}}</text>
+      </view>
+    </view>
+  </view>
+</view>

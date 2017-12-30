@@ -1,0 +1,20 @@
+<!--pages/room/room.wxml-->
+<view class="roomscontainer">
+  <view class="thead font-size2">
+    <view class="fieldname bg">教室</view>
+    <view class="fieldname bg">上午</view>
+    <view class="fieldname bg">下午</view>
+    <view class="fieldname bg">晚上</view>
+  </view>
+  <block wx:for="{{rooms}}" wx:for-item="room" wx:key="*this">
+    <view class="room">
+      <view class="field roomid">{{room.classroom}}</view>
+      <view class="field lesson {{room.status[1]=='空闲'?'color':'orangetext'}}">{{room.status[1]=='空闲'?"闲":"占"}}</view>
+      <view class="field lesson {{room.status[2]=='空闲'?'color':'orangetext'}}">{{room.status[2]=='空闲'?"闲":"占"}}</view>
+      <view class="field lesson {{room.status[3]=='空闲'?'color':'orangetext'}}">{{room.status[3]=='空闲'?"闲":"占"}}</view>
+      <view class="field lesson {{room.status[4]=='空闲'?'color':'orangetext'}}">{{room.status[4]=='空闲'?"闲":"占"}}</view>
+      <view class="field lesson {{room.status[5]=='空闲'?'color':'orangetext'}}">{{room.status[5]=='空闲'?"闲":"占"}}</view>
+      <view class="field lesson {{room.status[6]=='空闲'?'color':'orangetext'}}">{{room.status[6]=='空闲'?"闲":"占"}}</view>
+    </view>
+  </block>
+</view>

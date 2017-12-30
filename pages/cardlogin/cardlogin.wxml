@@ -1,0 +1,20 @@
+<!--pages/librarylogin/librarylogin.wxml-->
+<view class="logincontainer">
+  <view class="avatar">
+    <image src="{{userInfo.avatarUrl}}" mode="aspectFill" class="user-avatar"></image>
+  </view>
+  <view class="loginbox font-size1">
+    <form bindsubmit="login">
+      <view class="input">
+        <image src="/pages/person/pic/cardicon.png" class="hinticon"></image>
+        <input placeholder="校园卡账号" placeholder-class="input-holder1" type="text" confirm-type="next" name="cardNo" focus="{{formFocus[0]}}" bindconfirm="next"/>
+      </view>
+      <view class="input">
+        <image src="/pages/login/pic/passicon.png" class="hinticon"></image>
+        <input placeholder="校园卡查询密码" placeholder-class="input-holder1" type="text" confirm-type="next" password="{{true}}" name="pass" focus="{{formFocus[1]}}" bindconfirm="next"/>
+      </view>
+      <button form-type="submit" class="bigbutton bg font-size1">登录</button>
+    </form>
+  </view>
+</view>
+

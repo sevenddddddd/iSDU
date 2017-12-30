@@ -1,0 +1,64 @@
+/* pages/studyroom/studyroom.wxss */
+
+.campuses {
+  padding: 1em 0.2em 0;
+  text-align: center;
+  
+}
+
+.campus {
+  width: 215rpx;
+  margin:0 10rpx 0.3em;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.2em;
+}
+
+.symbol {
+  width: 2em;
+  height: 2em;
+  padding: 0.5em;
+}
+
+.hint {
+  position: fixed;
+  bottom: 40%;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.result {
+  background-color: rgb(250, 252, 249);
+  border-top: 15rpx solid rgba(221, 221, 221, 0.5);
+}
+
+.building {
+  position: relative;
+  padding: 0.8em 0 0.8em 1em;
+  border-bottom: 1px solid rgba(218, 218, 218, 0.5);
+  line-height: 1.5em;
+}
+
+.detail {
+  display: inline-block;
+  position: absolute;
+  right: 0.5em;
+}
+
+.p{
+  padding-top:0.2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pseudopointer{
+  border-left:0.6em solid rgb(250, 252, 249);
+  
+}
+.pointer{
+  margin-left: 1em;
+}
+
+

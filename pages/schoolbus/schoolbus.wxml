@@ -1,0 +1,27 @@
+<!--pages/schoolbus/schoolbus.wxml-->
+<view class="sbcontainer">
+  <text class="hint font-size2" style="visibility:{{warnVis}}">请选择起点和终点</text>
+  <view class="district">
+    <block wx:for="{{symbols}}" wx:for-item="symbol" wx:key="*this">
+      <view id="{{index}}" class="campus {{symbol.selected?'selected':'unselected'}}" bindtap="campusTap">
+        <image src="pic/{{symbol.pn}}.png" mode="aspectFit" class="symbol" style="transform:{{symbol.tf}}"></image>
+        <text class="font-size5">{{symbol.description}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="instructions font-size4">
+    <text>温馨提示：请依次单击校区图标以选择出发地和目的地
+    (查询电话：88395114)
+    订车服务电话：88395765或88392365
+    </text>
+  </view>
+  <view class="dayselect font-size3">
+    <text class="day_work" style="color:{{isWeekend?'#D3D3D3':'black'}}" bindtap="selectDay" id="work">工作日</text>
+    <text class="hr"></text>
+    <text class="day_weekend" style="color:{{isWeekend?'black':'#D3D3D3'}}" bindtap="selectDay" id="weekend">非工作日</text>
+  </view>
+  <view class="activity">
+    <button class="font-size2" bindtap="reset">重置</button>
+    <button bindtap="busQuery" class="bt_query font-size2">查询</button>
+  </view>
+</view>

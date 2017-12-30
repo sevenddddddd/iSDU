@@ -1,0 +1,34 @@
+/* pages/deposit/deposit.wxss */
+.amount{
+  padding:30rpx; 
+}
+.headertext{
+  vertical-align: middle;
+}
+.smallicon {
+  width: 1em;
+  height: 1em;
+  padding-right:0.8em;
+  vertical-align: middle;
+}
+.radio{
+  width: 50%;
+  margin-top: 1em;
+}
+.other{
+  padding-right: 1em;
+  margin-top: 1em;
+}
+.ud-input{
+  width:300rpx;
+  padding: 0;
+  border-bottom: 1rpx solid rgb(3, 139, 115);
+  text-align: right;
+}
+.bt_deposit{
+  width:680rpx;
+}
+.extra{
+  margin-top: 50rpx;
+  padding:0 30rpx;
+}

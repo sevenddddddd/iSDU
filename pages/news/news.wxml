@@ -1,0 +1,20 @@
+<!--pages/news/news.wxml-->
+<view class="newscontainer">
+  <view class="tabbar font-size5">
+    <view id="0" class="inlinebox {{currentTab==0?'newstab':''}}" bindtap="changeTab">学生在线</view>
+    <view id="1" class="inlinebox {{currentTab==1?'newstab':''}}" bindtap="changeTab">本科生院</view>
+    <view id="2" class="inlinebox {{currentTab==2?'newstab':''}}" bindtap="changeTab">青春山大</view>
+    <view id="3" class="inlinebox {{currentTab==3?'newstab':''}}" bindtap="changeTab">山大视点</view>
+  </view>
+  <view class="news">
+    <block wx:for="{{news[currentTab]}}" wx:for-item="item" wx:key="*this">
+      <view class="latest-content font-size2" id="{{index}}" bindtap="getDetail">
+        <text class="main">{{item.title}}</text>
+        <view class="newsabout unchtext font-size3">
+          <text>{{item.block}}</text>
+          <text class="newsdate">{{item.date}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

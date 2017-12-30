@@ -1,0 +1,38 @@
+<!--pages/studyroom/studyroom.wxml-->
+<view class="srcontainer">
+  
+  <view class="campuses">
+    <block wx:for="{{symbols}}" wx:for-item="symbol" wx:key="*this">
+      <view id="{{index}}" class="campus {{symbol.selected?'selected':'unselected'}}" bindtap="campusTap">
+        <image src="/utils/pic/campuses/{{symbol.pn}}.png" class="symbol"></image>
+        <text class="campusname font-size3">{{symbol.name}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="picker font-size3">
+    <picker mode="multiSelector" range="{{pickerrange}}" bindchange="changeTime">
+      第<view class="pickertime color">{{pickerrange[0][time[0]]}}</view>周
+      星期<view class="pickertime color">{{pickerrange[1][time[1]]}}</view>
+      <image src="/utils/pic/switch_white.png" mode="aspectFill" class="switchicon"></image>
+    </picker>
+  </view>
+  <template name="hint">
+    <view class="color hint font-size1">{{hint}}</view>
+  </template>
+  <template name="buildings">
+    <block wx:for="{{buildings}}" wx:for-item="building" wx:key="*this">
+      <view id="{{building.name}}" class="building main font-size2" bindtap="buildingTap">
+        <text>{{building.name}}</text>
+        <view class="detail">
+          <view class="p">
+            <view class="pointer"></view>
+            <view class="pseudopointer"></view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </template>
+  <view class="result">
+    <template is="{{campus==-1?'hint':'buildings'}}" data="{{...result}}"></template>
+  </view>
+</view>

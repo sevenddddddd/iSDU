@@ -1,0 +1,99 @@
+<!--pages/library/library.wxml-->
+<view class="librarycontainer">
+  <view class="font-size1">
+    <view id="0" class="tab bg" bindtap="tab">
+      <text>馆藏查询</text>
+      <text class="mark {{tab?'currenttab':'hide'}}"></text>
+    </view>
+    <view id="1" class="tab bg" bindtap="tab">
+      <text>余座查询</text>
+      <text class="mark {{tab?'hide':'currenttab'}}"></text>
+    </view>
+  </view>
+  <template name="b-books">
+    <view class="search">
+      <view class="input-search font-size2">
+        <input placeholder="输入你想看的书" placeholder-class="input-holder2" type="text" confirm-type="search" bindconfirm="search" bindinput="getInput"/>
+        <image src="pic/searchicon.png" class="searchicon" bindtap="search"></image>
+      </view>
+    </view>
+    <view class="borrowed">
+      <view class="lable color font-size2">
+        <text>当前借阅</text>
+      </view>
+      <view wx:if="{{borrowedbooks.length==0}}" class="color borrowedHint font-size3">{{borrowedHint}}</view>
+      <block wx:for="{{borrowedbooks}}" wx:for-item="book" wx:key="*this">
+        <view class="b-book">
+          <image src="pic/tag.png" class="tag"></image>
+          <view class="b-name font-size3 main">《{{book.name}}》</view>
+          <view class="b-info font-size4">
+            <image src="pic/author.png" class="b-infoicon"></image>
+            <text class="b-infocontent secondtext">作者：{{book.author}}</text>
+          </view>
+          <view class="b-info font-size4">
+            <image src="/utils/pic/clockicon.png" class="b-infoicon"></image>
+            <text class="b-infocontent secondtext">应还日期：</text>
+            <text class="b-infocontent orangetext">{{book.retDate}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </template>
+  <template name="result">
+    <view class="r-books">
+      <view wx:if="{{resultbooks.length==0}}" class="color resultHint">{{resultHint}}</view>
+      <block wx:for="{{resultbooks}}" wx:for-item="book" wx:key="*this">
+        <view class="r-book">
+          <view class="title">
+            <view class="r-name font-size2 main">《{{book.name}}》</view>
+            <view class="r-author secondtext font-size3">
+              <text decode='{{true}}'>{{book.author}}@{{book.press}}</text>
+            </view>
+          </view>
+          <view class="r-info">
+            <view wx:if="{{book.canBor=='0'}}" class="noborrow warntext">
+              <text>当前无可借阅复本</text>
+            </view>
+            <block wx:else>
+              <view class="thead font-size4">
+                <view class="inlinebox secondtext" style="border-right:1rpx solid rgb(3, 139, 115);">馆藏地</view>
+                <view class="inlinebox secondtext">索书号</view>
+              </view>
+              <block wx:for="{{book.books}}" wx:for-item="item" wx:key="*this">
+                <view class="item font-size3 color">
+                  <view class="inlinebox">{{item}}</view>
+                  <view class="inlinebox">{{book.code}}</view>
+                </view>
+              </block>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </template>
+  <template name="seats">
+    <view class="campuses">
+      <block wx:for="{{symbols}}" wx:for-item="symbol" wx:key="*this">
+        <view id="{{index}}" class="campus {{symbol.selected?'selected':'unselected'}}" bindtap="campusTap">
+          <image src="/utils/pic/campuses/{{symbol.pn}}.png" class="symbol"></image>
+          <text class="campusname font-size3">{{symbol.name}}</text>
+        </view>
+      </block>
+    </view>
+    <view class="rooms" hidden="{{campus==-1}}">
+      <block wx:for="{{rooms}}" wx:for-item="room" wx:key="*this">
+        <view class="room">
+          <view class="roomname orangetext font-size1">{{room.room}}</view>
+          <view class="seats secondtext font-size2">
+            占<text class="occupied font-size3">{{room.used}}</text>
+            剩<text class="left {{room.free>9?'color':'warntext'}} font-size3">{{room.free}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="color hint font-size1" hidden="{{campus!=-1}}">{{hint}}</view>
+  </template>
+  <view class="library">
+    <template is="{{current}}" data="{{...library}}"></template>
+  </view>
+</view>

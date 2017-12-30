@@ -1,0 +1,30 @@
+/* pages/newsdetail/newsdetail.wxss */
+.ndcontainer{
+  padding: 0 30rpx;
+}
+.title{
+  text-align: center;
+  padding: 20rpx 0;
+}
+.about{
+  margin-bottom: 20rpx;
+  text-align: right;
+}
+.site ,.date{
+  display: inline-block;
+  padding:0.1em 0.5em;
+  border: 1rpx solid rgb(217, 143, 64);
+  border-radius: 0.7em;
+}
+.site{
+  margin-right: 1em;
+}
+.content{
+  text-align: justify;
+  padding-bottom: 2em;
+  line-height: 1.4em;
+}
+.href{
+  text-indent: 2em;
+  font-weight: bold;
+}
