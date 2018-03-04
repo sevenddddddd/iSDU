@@ -1,4 +1,4 @@
-var termBegin = { month: 8, date: 11 }//开学第一周第一天
+var termBegin = { year:2018, month: 2, date: 5 }//开学第一周星期一
 function getWeek_day() {//获取当前周、星期
   var current = {};//当前时间
   var now = new Date()
@@ -6,14 +6,18 @@ function getWeek_day() {//获取当前周、星期
   var month = now.getMonth()
   var date = now.getDate()
   var day = now.getDay()
-  var month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
-    month_days[1] = 29
   current.day = day;
   if (day == 0)
     current.day = 7;
+  var month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  if(year>termBegin.year){//跨年判断
+    current.week=Math.floor(date/7)+16
+    return current;
+  }
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+    month_days[1] = 29
   var days = date - termBegin.date;
-  if (termBegin.month > month || termBegin.month == month && days < 0)//当前在暑假则判为第一周第一天
+  if (termBegin.month > month || termBegin.month == month && days < 0)//当前在假期则判为第一周第一天
     current = { week: 0, day: 1 };
   else {
     for (let m = termBegin.month; m < month; m++)

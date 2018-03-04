@@ -36,10 +36,15 @@ Page({
           wx.hideLoading()
           if (res.data['code'] >= 0) {
             console.log("获取考试安排成功！")
+            var resData=res.data['obj']
+            var exams=[]
+            for(let item in resData){
+              exams=exams.concat(resData[item])
+            }
             that.setData({
-              exams: res.data['obj']['期末考试']
+              exams: exams
             })
-            if (!res.data['obj']['期末考试'])
+            if (exams.length==0)
               wx.showModal({
                 title: '提示',
                 content: '现在暂无考试',

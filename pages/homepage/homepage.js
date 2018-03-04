@@ -226,13 +226,6 @@ Page({
       })
       return;
     }
-    if (id == 'library') {
-      wx.showModal({
-        title: '提示',
-        content: '图书馆功能维护中'
-      })
-      return;
-    }
     if (id == 'schoolbus' || id == 'studyroom' || id == 'calendar') {//校车、校历、自习室无条件进入
       var url = "/pages/" + id + "/" + id;
       wx.navigateTo({
