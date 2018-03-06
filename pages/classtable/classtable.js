@@ -21,7 +21,7 @@ Page({
   /**
    * 获取课程表及今日课程
    */
-  getClass: function () {
+  getClass: function (refresh) {
     var that = this;
     var now = app.globalData.now;//获取当前周和星期
     var classinfo = wx.getStorageSync('classinfo');//获取缓存中的课程表
@@ -57,7 +57,11 @@ Page({
             that.setData({
               classinfo: classinfo
             });
-            this.loadClassTable();//加载当前周课程
+            if(refresh)
+              wx.showToast({
+                title: '刷新成功',
+              })
+            that.loadClassTable();//加载当前周课程
           }
           else {
             console.log("服务器错误")
@@ -208,5 +212,19 @@ Page({
       }
     }
     this.setData(scale);
+  },
+  
+
+  /**
+   * 刷新课表
+   */
+  refresh:function(){
+    var that=this;
+    wx.removeStorage({
+      key: 'classinfo',
+      success: function(res) {
+        that.getClass(true);
+      }
+    })
   }
 })

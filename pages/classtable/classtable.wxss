@@ -52,3 +52,8 @@
 .notCday{
   padding:0.1em 0.4em;
 }
+.refresh{
+  position:absolute;
+  right:1em;
+  top:0.2em;
+}

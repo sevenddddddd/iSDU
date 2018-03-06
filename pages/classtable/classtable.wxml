@@ -7,6 +7,7 @@
       <text>周</text>
       <image src="/utils/pic/switch_green.png" mode="aspectFill" class="switchicon"></image>
     </picker>
+    <text class="refresh" bindtap='refresh'>刷新</text>
   </view>
   <view class="weekdays font-size2 color">
     <view class="blank">  </view>
