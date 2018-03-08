@@ -18,13 +18,25 @@ Page({
   },
 
   /**
+   * 课程表是否一定是最新的
+   */
+  classValid:function(){
+    var classStampWeek = wx.getStorageInfoSync();//获取上次获取课程表的在第几周
+    var now = app.globalData.now;//获取当前周和星期
+    if(classStampWeek<=1||(classStampWeek>=16&&classStampWeek<=18))
+      return false;
+    else
+      return true;
+  },
+
+  /**
    * 获取课程表及今日课程
    */
   getClass: function () {
     var that = this;
     var now = app.globalData.now;//获取当前周和星期
     var classinfo = wx.getStorageSync('classinfo');//获取缓存中的课程表
-    if (classinfo) {//若缓存中有
+    if (classinfo&&that.classValid()) {//若缓存中有而且上次获取的课程表一定是最新的
       app.globalData.classinfo = classinfo;
       //获取今日课程
       var c = null;
@@ -58,6 +70,10 @@ Page({
               success: function () {
                 console.log("课程表缓存成功")
               }
+            })
+            wx.setStorage({
+              key: 'classStampWeek',
+              data: now.week,
             })
             app.globalData.classinfo = classinfo;//存到app全局变量中
             //获取今日课程

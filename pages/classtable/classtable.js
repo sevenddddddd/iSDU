@@ -53,6 +53,10 @@ Page({
                 console.log("课程表缓存成功")
               }
             })
+            wx.setStorage({
+              key: 'classStampWeek',
+              data: now.week,
+            })
             app.globalData.classinfo = classinfo;//存到app全局变量中
             that.setData({
               classinfo: classinfo

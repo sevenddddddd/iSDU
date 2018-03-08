@@ -1,7 +1,7 @@
 <!--pages/feedback/feedback.wxml-->
 <view class="fbcontainer">
   <form bindsubmit="submit">
-    <textarea name="fbcontent" class="fbcontent font-size2" value="{{feedback}}"></textarea>
+    <textarea name="fbcontent" class="fbcontent font-size2" value='{{feedback}}'></textarea>
       <text class="inform secondtext font-size4">以下为选填，留下您的联系方式有助于我们更快地联系到您并帮您解决问题。</text>
       <view class="extra font-size3">
         <view class="input">

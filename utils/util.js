@@ -10,10 +10,6 @@ function getWeek_day() {//获取当前周、星期
   if (day == 0)
     current.day = 7;
   var month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-  if(year>termBegin.year){//跨年判断
-    current.week=Math.floor(date/7)+16
-    return current;
-  }
   if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
     month_days[1] = 29
   var days = date - termBegin.date;
@@ -22,7 +18,8 @@ function getWeek_day() {//获取当前周、星期
   else {
     for (let m = termBegin.month; m < month; m++)
       days += month_days[m];
-    current.week = Math.floor(days / 7)
+      var week = Math.floor(days / 7)
+      current.week = week>19?19:week
   }
   return current;
 }
