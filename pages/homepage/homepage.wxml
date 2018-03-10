@@ -97,6 +97,6 @@
     </view>
     <view class="chain"></view>
     <view class="bb-content font-size2 color">{{bbContent}}</view>
-    <view class="close-icon font-size1 color" bindtap='hideBillboard'>×</view>
+    <view class="close-icon color" bindtap='hideBillboard'>⊗</view>
   </view>
 </view>

@@ -156,13 +156,9 @@ swiper{
   border: 2rpx solid rgb(3, 139, 115);
 }
 .close-icon{
-  width: 1em;
-  height: 1.3em;
-  line-height: 1.3em;
-  padding-left: 0.3em;
-  margin: 10rpx auto 0;
-  border:1rpx solid rgb(3, 139, 115);
-  border-radius: 50%;
+  font-size: 50rpx;
   font-weight: lighter;
+  width: 1.2em;
+  margin: 5rpx auto 0;
   background-color: white;
 }
