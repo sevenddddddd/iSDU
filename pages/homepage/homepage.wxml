@@ -90,4 +90,13 @@
       </view>
     </view>
   </view>
+  <view class="billboard" hidden='{{bbHidden}}'>
+    <view class="bb-header">
+      <text class="font-size1">公 告\n</text>
+      <text class="font-size2">({{bbTime}})</text>
+    </view>
+    <view class="chain"></view>
+    <view class="bb-content font-size2 color">{{bbContent}}</view>
+    <view class="close-icon font-size1 color" bindtap='hideBillboard'>×</view>
+  </view>
 </view>

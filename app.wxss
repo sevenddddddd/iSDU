@@ -1,15 +1,15 @@
-/**app.wxss**/
+/*app.wxss*/
 
-/**
+/*
 小程序主题
-**/
+*/
 
 page {
   font-size: 35rpx;
   line-height: 1.2;
 }
 
-/**校区选中背景、文字颜色**/
+/*校区选中背景、文字颜色*/
 
 .selected {
   background-color: rgba(211, 221, 211, 0.5);
@@ -20,7 +20,7 @@ page {
   color: rgb(136, 136, 136);
 }
 
-/**picker的样式**/
+/*picker的样式*/
 
 .picker {
   padding: 0 1em;
@@ -35,14 +35,14 @@ picker {
   padding-left: 1.2em;
 }
 
-/**picker中待选择的内容**/
+/*picker中待选择的内容*/
 
 .pickertime {
   display: inline-block;
   padding: 0.3em 0.6em;
 }
 
-/**修改icon**/
+/*修改icon*/
 
 .switchicon {
   width: 1em;
@@ -50,50 +50,50 @@ picker {
   padding-left:0.2em;
 }
 
-/**背景和字颜色搭配**/
+/*背景和字颜色搭配*/
 
 .bg {
   background-color: rgb(3, 139, 115);
   color: rgb(255, 255, 255);
 }
 
-/**字颜色**/
+/*字颜色*/
 
 .color {
   color: rgb(3, 139, 115);
 }
 
-/**大段内容**/
+/*大段内容*/
 
 .main {
   color: rgb(53, 53, 53);
 }
 
-/**辅助信息**/
+/*辅助信息*/
 
 .secondtext {
   color: rgb(136, 136, 136);
 }
 
-/**不变文字**/
+/*不变文字*/
 
 .unchtext {
   color: rgb(140, 141, 141);
 }
 
-/**警戒文字**/
+/*警戒文字*/
 
 .warntext {
   color: rgb(251, 44, 32);
 }
 
-/**提亮橙色**/
+/*提亮橙色*/
 
 .orangetext {
   color: rgb(217, 143, 64);
 }
 
-/**大按钮**/
+/*大按钮*/
 
 .bigbutton {
   width: 500rpx;
@@ -101,7 +101,7 @@ picker {
   line-height: 90rpx;
 }
 
-/**中按钮**/
+/*中按钮*/
 
 .middlebutton {
   width: 300rpx;
@@ -109,13 +109,13 @@ picker {
   line-height: 70rpx;
 }
 
-/**链接选中样式**/
+/*链接选中样式*/
 
 .select {
   background-color: inherite;
 }
 
-/**表单input**/
+/*表单input*/
 
 .input {
   border-bottom: 1rpx solid rgb(3, 139, 115);
@@ -155,7 +155,7 @@ input {
   color: rgb(178, 178, 178);
 }
 
-/**指示箭头**/
+/*指示箭头*/
 
 .pseudopointer {
   display: inline-block;
@@ -183,7 +183,7 @@ input {
   border-radius: 15rpx;
 }
 
-/**页面中的tabbar**/
+/*页面中的tabbar*/
 
 .tab {
   display: inline-flex;
@@ -200,21 +200,21 @@ input {
   margin-top: 0.5em;
 }
 
-/**tab下划线的颜色**/
+/*tab下划线的颜色*/
 
-/**显示**/
+/*显示*/
 
 .currenttab {
   background-color: white;
 }
 
-/**隐藏**/
+/*隐藏*/
 
 .hide {
   background-color: rgb(3, 139, 115);
 }
 
-/**字大小**/
+/*字大小*/
 
 .font-size1 {
   font-size: 40rpx;
@@ -232,14 +232,14 @@ input {
   font-size: 29rpx;
 }
 
-/**功能图标描述字体大小**/
+/*功能图标描述字体大小*/
 
 .font-size5 {
   font-size: 28rpx;
 }
 
 
-/**pointer**/
+/*pointer*/
 
 .p {
   float: right;
@@ -255,7 +255,7 @@ input {
   border-left: 0.6em solid rgb(53, 53, 53);
 }
 
-/**资讯条的内容框**/
+/*资讯条的内容框*/
 
 .latest-content {
   position: relative;
@@ -284,7 +284,7 @@ input {
   float: right;
 }
 
-/**建设中**/
+/*建设中*/
 
 .constrc {
   position: fixed;

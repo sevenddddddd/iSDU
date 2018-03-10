@@ -14,7 +14,10 @@ Page({
     time_order_summer: [null, '08:00-09:50', '10:10-12:00', '14:00-15:50', '16:00-17:50', '18:30-20:20'],//时刻表
     time_order_winter: [null, '08:00-09:50', '10:10-12:00', '13:30-15:20', '15:30-17:20', '18:30-20:20'],//时刻表
     classHint: '获取中...',//今天是否有课
-    newsHint: '获取中...'  //新闻异常提示
+    newsHint: '获取中...',  //新闻异常提示
+    bbContent:"大家好，2017-2018年秋季学期校历已更新，具体请前往校历页查看；课表更新不及时的缺陷已修复，在此对之前给您所造成的种种不便表示歉意。",//公告板的内容
+    bbTime:"2018-3-10",
+    bbHidden: false,
   },
 
   /**
@@ -23,7 +26,7 @@ Page({
   classValid:function(){
     var classStampWeek = wx.getStorageInfoSync();//获取上次获取课程表的在第几周
     var now = app.globalData.now;//获取当前周和星期
-    if(classStampWeek<=1||(classStampWeek>=16&&classStampWeek<=18))
+    if(classStampWeek<=1||(classStampWeek>=16&&classStampWeek<=18)||!classStampWeek)
       return false;
     else
       return true;
@@ -102,6 +105,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var lastBbTime=wx.getStorageSync('lastBbTime');
+    if(lastBbTime===this.data.bbTime)
+      this.setData({bbHidden:true})
     wx.showLoading({
       title: '加载中',
       mask: true
@@ -298,5 +304,13 @@ Page({
         url: '/pages/newsdetail/newsdetail?site=sduOnline&id=0',
       })
     }
+  },
+
+  /**
+   * 关闭公告板
+   */
+  hideBillboard:function(){
+    this.setData({bbHidden:true})
+    wx,wx.setStorageSync('lastBbTime', this.data.bbTime)
   }
 })

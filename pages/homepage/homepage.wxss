@@ -52,7 +52,7 @@ swiper{
   vertical-align: middle;
 }
 
-/**今日课程的内容框**/
+/*今日课程的内容框*/
 .todayclass{
   padding: 20rpx 45rpx;
 }
@@ -106,7 +106,7 @@ swiper{
   padding:1em 0;
 }
 
-/**资讯**/
+/*资讯*/
 .latest-content{
   padding:15rpx 45rpx 60rpx;
 }
@@ -116,4 +116,53 @@ swiper{
 .news-hint{		 
   text-align: center;		 
   padding:1em 0;		 
+}
+
+/*公告板*/
+.billboard{
+  width: 450rpx;
+  height: 700rpx;
+  margin-left: -225rpx;
+  margin-top: -300rpx;
+  position: fixed;
+  top:50%;
+  left: 50%;
+}
+.bb-header{
+  height: 100rpx;
+  border-radius: 50rpx 50rpx 0 0/30rpx 30rpx 0 0;
+  background-color: rgba(3, 139, 115,0.7);
+  color: whitesmoke;
+  text-align: center;
+  line-height: 50rpx;
+  border: 2rpx solid rgb(3, 139, 115);
+}
+.chain{
+  height: 50rpx;
+  width: 250rpx;
+  margin: 0 auto;
+  border-left: 5rpx solid rgb(3, 139, 115);
+  border-right: 5rpx solid rgb(3, 139, 115);
+  background-color: white;
+}
+.bb-content{
+  width: 350rpx;
+  min-height: 350rpx;
+  max-height: 450rpx;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 15rpx;
+  text-indent: 2em;
+  border: 2rpx solid rgb(3, 139, 115);
+}
+.close-icon{
+  width: 1em;
+  height: 1.3em;
+  line-height: 1.3em;
+  padding-left: 0.3em;
+  margin: 10rpx auto 0;
+  border:1rpx solid rgb(3, 139, 115);
+  border-radius: 50%;
+  font-weight: lighter;
+  background-color: white;
 }
