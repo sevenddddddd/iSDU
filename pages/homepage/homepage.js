@@ -17,14 +17,14 @@ Page({
     newsHint: '获取中...',  //新闻异常提示
     bbContent:"大家好，2017-2018年秋季学期校历已更新，具体请前往校历页查看；课表更新不及时的缺陷已修复，在此对之前给您所造成的种种不便表示歉意。",//公告板的内容
     bbTime:"2018-3-11",
-    bbHidden: false,
+    bbHidden: true,
   },
 
   /**
    * 课程表是否一定是最新的
    */
   classValid:function(){
-    var classStampWeek = wx.getStorageInfoSync();//获取上次获取课程表的在第几周
+    var classStampWeek = wx.getStorageSync('classStampWeek');//获取上次获取课程表的在第几周
     var now = app.globalData.now;//获取当前周和星期
     if(classStampWeek<=1||(classStampWeek>=16&&classStampWeek<=18)||!classStampWeek)
       return false;
@@ -143,7 +143,7 @@ Page({
           clearInterval(polling1);
         }
         else {
-          console.log("正在等待今日课程……");
+          console.log("正在等待教务绑定情况……");
         }
       }, 500)
     }
