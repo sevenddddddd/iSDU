@@ -46,12 +46,29 @@ App({
                     success: function (res) {
                       if (res.data['code'] >= 0) {
                         console.log("获取绑定状态成功！");
-                        that.globalData.bind=res.data['obj'];//存下绑定状态（用于card）
+                        that.globalData.bind = res.data['obj'];//存下绑定状态（用于card）
+                        var pages = getCurrentPages()
+                        var homepage;
+                        for (let page of pages)
+                          if (page.route === "pages/homepage/homepage")
+                            homepage = page
                         if (res.data['obj']['academic']) {
                           that.globalData.academic = 'YES';
+                          if (homepage) {
+                            wx.hideLoading();
+                            homepage.getClass();
+                          }
                         }
-                        else
+                        else {
                           that.globalData.academic = 'NO';
+                          if(homepage){
+                            wx.hideLoading();
+                            console.log("未绑定教务")
+                            this.setData({
+                              classHint: "未绑定教务"
+                            });
+                          }
+                        }
                       }
                     }
                   })
@@ -142,7 +159,7 @@ App({
   globalData: {
     classtime: false,//当前是否夏令时
     now: null,//当前周和星期{week:,day:}
-    bind:{academic:'unknown',library:'unknown',card:'unknown'},//绑定状态（用于card）
+    bind: { academic: 'unknown', library: 'unknown', card: 'unknown' },//绑定状态（用于card）
     academic: 'unknown',//教务绑定状态{'YES':绑定了学生教务;'NO':未绑定}
     classinfo: null,//课程表
     news: [],//资讯

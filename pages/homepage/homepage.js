@@ -105,47 +105,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     var lastBbTime=wx.getStorageSync('lastBbTime');
     if(lastBbTime===this.data.bbTime)
       this.setData({bbHidden:true})
-    wx.showLoading({
-      title: '加载中',
-      mask: true
-    })
-    var that = this;
     this.setData({
       classtime: app.globalData.classtime
     })
-    if (app.globalData.academic == 'YES') {
-      wx.hideLoading();
+    if (app.globalData.academic=="unknown")
+      wx.showLoading({
+        title: '加载中',
+        mask: true
+      })
+    else if (app.globalData.academic == 'YES') {
       this.getClass();
     }
     else if (app.globalData.academic == 'NO') {
-      wx.hideLoading();
       console.log("未绑定教务")
       this.setData({
         classHint: "未绑定教务"
       });
-    }
-    else {
-      var polling1 = setInterval(function () {
-        if (app.globalData.academic == 'YES') {
-          wx.hideLoading();
-          that.getClass();
-          clearInterval(polling1);
-        }
-        else if (app.globalData.academic == 'NO') {
-          wx.hideLoading();
-          console.log("未绑定教务")
-          that.setData({
-            classHint: "未绑定教务"
-          });
-          clearInterval(polling1);
-        }
-        else {
-          console.log("正在等待教务绑定情况……");
-        }
-      }, 500)
     }
     if (app.globalData.newsGot) {
       if (app.globalData.news[0][0]['title']) {
