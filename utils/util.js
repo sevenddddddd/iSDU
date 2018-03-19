@@ -24,7 +24,7 @@ function getWeek_day() {//获取当前周、星期
   return current;
 }
 function wd_toDate(week, day) {//将周、星期转化成日期
-  var date = new Date(2017, termBegin.month, termBegin.date);
+  var date = new Date(2018, termBegin.month, termBegin.date);
   date.setDate(week * 7 + day - 1 + termBegin.date)
   return date;
 }

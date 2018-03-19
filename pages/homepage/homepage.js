@@ -26,7 +26,7 @@ Page({
   classValid:function(){
     var classStampWeek = wx.getStorageSync('classStampWeek');//获取上次获取课程表的在第几周
     var now = app.globalData.now;//获取当前周和星期
-    if(classStampWeek<=1||(classStampWeek>=16&&classStampWeek<=18)||!classStampWeek)
+    if(classStampWeek<=2||(classStampWeek>=16&&classStampWeek<=18)||!classStampWeek)
       return false;
     else
       return true;
