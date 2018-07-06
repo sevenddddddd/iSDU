@@ -227,6 +227,13 @@ Page({
       })
       return;
     }
+    if (id == 'score') {
+      wx.showModal({
+        title: '提示',
+        content: '因相关政策，成绩查询暂时下架，开放时间另行通知'
+      })
+      return;
+    }
     if (id == 'schoolbus' || id == 'studyroom' || id == 'calendar') {//校车、校历、自习室无条件进入
       var url = "/pages/" + id + "/" + id;
       wx.navigateTo({
