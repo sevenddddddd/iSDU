@@ -1,4 +1,4 @@
-var termBegin = { year:2018, month: 2, date: 5 }//开学第一周星期一
+var termBegin = { year:2018, month: 8, date: 10 }//开学第一周星期一
 function getWeek_day() {//获取当前周、星期
   var current = {};//当前时间
   var now = new Date()
