@@ -1,7 +1,7 @@
 var termBegin = {
-  year: 2018,
-  month: 8,
-  date: 10
+  year: 2019,
+  month: 1,
+  date: 25
 } //开学第一周星期一
 function getWeek_day() { //获取当前周、星期
   var current = {}; //当前时间
